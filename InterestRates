@@ -1,0 +1,19 @@
+public class interestrates{
+
+     public static void main(String []args){
+       System.out.println(mutual(15000,12,10));
+       System.out.println(interestSum(15000,6,120));
+
+     }
+     public static double interestSum(int p, int r, int months){
+        double sum  = 0;
+        
+        for(int i=0;i<months;i++){
+            sum  = sum+p+ (sum+p)*r/1200;
+        }
+        return sum;
+     }
+      public static double mutual(int p, int expreturn, int years){
+        return p*years*12*(Math.pow((1.0+expreturn/100.0),years));
+     }
+}
