@@ -1,0 +1,28 @@
+Find gcd of two numbers a and b
+
+
+Assuming a>b
+
+a = bq+r where q and r are quotient and remainer
+
+since a and b have a gcd(a,b)
+
+x * gcd(a,b) = y * gcd(a,b) * q + r
+
+This implies r is a multiple of gcd(a,b) so 
+
+x * gcd(a,b) =  t * gcd(a,b) + z * gcd(a,b)  
+
+Hence
+
+b = t * gcd(a,b)
+r = z * gcd(a,b)   where t and z are two integers
+
+gcd(b,r) = gcd(t,z) * gcd(a,b)
+
+
+Let's assume gcd(t,z) = h where h!=1
+This implies,   a,b also has a divisor h* gcd(a,b) which is a contradiction since there can be no divisor greater than the gcd(a,b) itself
+so gcd(t,z) is always 1
+
+gcd(b,r) =  gcd(a,b) This is the established recurrance relation
